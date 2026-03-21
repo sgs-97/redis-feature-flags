@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "redis-feature-flags"
+version = "0.1.0"
+description = "Feature flags backed by Redis. No new server. No monthly bill."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["redis", "feature-flags", "feature-toggles", "rollout"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "redis>=4.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "fakeredis>=2.0",
+    "black",
+    "mypy",
+    "ruff",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=redis_feature_flags --cov-report=term-missing --cov-fail-under=90"
+
+[tool.coverage.run]
+source = ["redis_feature_flags"]
+omit = ["tests/*"]
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+
+[tool.hatch.build.targets.wheel]
+packages = ["redis_feature_flags"]

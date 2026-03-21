@@ -1,0 +1,69 @@
+{
+    "version": "1",
+    "description": "Evaluation test cases every SDK must pass",
+    "tests": [
+      {
+        "id": "disabled_flag_returns_false",
+        "flag": { "enabled": "0", "rollout": "100" },
+        "user_id": "alice",
+        "user_in_allowlist": false,
+        "user_cohorts": [],
+        "flag_cohorts": [],
+        "expected": false
+      },
+      {
+        "id": "enabled_user_in_allowlist_returns_true",
+        "flag": { "enabled": "1", "rollout": "0" },
+        "user_id": "alice",
+        "user_in_allowlist": true,
+        "user_cohorts": [],
+        "flag_cohorts": [],
+        "expected": true
+      },
+      {
+        "id": "rollout_100_returns_true",
+        "flag": { "enabled": "1", "rollout": "100" },
+        "user_id": "alice",
+        "user_in_allowlist": false,
+        "user_cohorts": [],
+        "flag_cohorts": [],
+        "expected": true
+      },
+      {
+        "id": "rollout_0_returns_false",
+        "flag": { "enabled": "1", "rollout": "0" },
+        "user_id": "alice",
+        "user_in_allowlist": false,
+        "user_cohorts": [],
+        "flag_cohorts": [],
+        "expected": false
+      },
+      {
+        "id": "expired_flag_returns_false",
+        "flag": { "enabled": "1", "rollout": "100", "expires_at": "1000" },
+        "user_id": "alice",
+        "user_in_allowlist": false,
+        "user_cohorts": [],
+        "flag_cohorts": [],
+        "expected": false
+      },
+      {
+        "id": "cohort_match_returns_true",
+        "flag": { "enabled": "1", "rollout": "0" },
+        "user_id": "alice",
+        "user_in_allowlist": false,
+        "user_cohorts": ["beta-testers"],
+        "flag_cohorts": ["beta-testers"],
+        "expected": true
+      },
+      {
+        "id": "cohort_no_match_continues_to_rollout",
+        "flag": { "enabled": "1", "rollout": "0" },
+        "user_id": "alice",
+        "user_in_allowlist": false,
+        "user_cohorts": ["premium"],
+        "flag_cohorts": ["beta-testers"],
+        "expected": false
+      }
+    ]
+  }

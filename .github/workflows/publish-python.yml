@@ -1,0 +1,20 @@
+# .github/workflows/publish-python.yml
+
+name: Publish Python SDK
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+      - run: cd sdks/python && pip install build twine
+      - run: cd sdks/python && python -m build
+      - run: cd sdks/python && twine upload dist/*
+        env:
+          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
