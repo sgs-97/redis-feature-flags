@@ -7,7 +7,7 @@ name = "redis-flags"
 version = "0.1.0"
 description = "CLI for redis-feature-flags — manage feature flags from your terminal."
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 license = { text = "MIT" }
 keywords = ["redis", "feature-flags", "cli"]
 dependencies = [
