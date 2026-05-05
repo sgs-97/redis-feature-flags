@@ -46,7 +46,7 @@ jobs:
       - name: Run SDK unit tests
         run: |
           cd sdks/python
-          pytest tests/ -v
+          pytest tests/ --ignore=tests/e2e -v
 
       - name: Run CLI unit tests
         run: |
