@@ -1,0 +1,59 @@
+name: Test Python SDK
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      redis:
+        image: redis:7
+        ports:
+          - 6379:6379
+          - 6399:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 5
+
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install SDK
+        run: |
+          cd sdks/python
+          pip install -e ".[dev]"
+
+      - name: Install CLI
+        run: |
+          cd cli
+          pip install -e ".[dev]"
+
+      - name: Run SDK unit tests
+        run: |
+          cd sdks/python
+          pytest tests/ -v
+
+      - name: Run CLI unit tests
+        run: |
+          cd cli
+          pytest tests/ -v
+
+      - name: Run e2e tests
+        run: |
+          cd sdks/python
+          pytest tests/e2e/ -v
