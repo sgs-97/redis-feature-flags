@@ -1,0 +1,15 @@
+/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/main/java/com/redisfeatureflags/Evaluator.java
+/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/main/java/com/redisfeatureflags/LocalCache.java
+/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/main/java/com/redisfeatureflags/exceptions/InvalidRolloutError.java
+/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/main/java/com/redisfeatureflags/Utils.java
+/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/main/java/com/redisfeatureflags/exceptions/RedisConnectionError.java
+/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/main/java/com/redisfeatureflags/CohortManager.java
+/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/main/java/com/redisfeatureflags/SchemaKeys.java
+/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/main/java/com/redisfeatureflags/spring/FeatureFlagsProperties.java
+/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/main/java/com/redisfeatureflags/exceptions/CohortNotFoundError.java
+/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/main/java/com/redisfeatureflags/spring/FeatureFlagsAutoConfiguration.java
+/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/main/java/com/redisfeatureflags/FeatureFlags.java
+/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/main/java/com/redisfeatureflags/exceptions/RedisFlagError.java
+/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/main/java/com/redisfeatureflags/exceptions/FlagNotFoundError.java
+/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/main/java/com/redisfeatureflags/exceptions/SchemaVersionError.java
+/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/main/java/com/redisfeatureflags/JedisProvider.java
