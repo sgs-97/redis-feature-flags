@@ -3,8 +3,8 @@
 [![PyPI version](https://badge.fury.io/py/redis-feature-flags.svg)](https://badge.fury.io/py/redis-feature-flags)
 [![Python versions](https://img.shields.io/pypi/pyversions/redis-feature-flags)](https://pypi.org/project/redis-feature-flags)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://github.com/gayatrisravya/redis-feature-flags/actions/workflows/test-python.yml/badge.svg)](https://github.com/gayatrisravya/redis-feature-flags/actions)
-[![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)](https://github.com/gayatrisravya/redis-feature-flags)
+[![Tests](https://github.com/sgs-97/redis-feature-flags/actions/workflows/test-python.yml/badge.svg)](https://github.com/sgs-97/redis-feature-flags/actions)
+[![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)](https://github.com/sgs-97/redis-feature-flags)
 
 Feature flags for teams that already run Redis.
 No new server. No monthly bill. No SaaS.
@@ -13,12 +13,13 @@ No new server. No monthly bill. No SaaS.
 
 ## Why redis-feature-flags?
 
-| | redis-feature-flags | LaunchDarkly | Unleash |
-|---|---|---|---|
-| Infrastructure needed | Redis (already running) | Their SaaS | Their server + DB |
-| Monthly cost | Free | $500–2000 | Free but ops overhead |
-| Data leaves your infra | Never | Yes | Depends |
-| Setup time | 60 seconds | Hours | Hours |
+- No new server — uses Redis you already run
+- No monthly bill — completely free
+- Data never leaves your infrastructure
+- 60 second setup
+- Works with any Redis instance — any host, any port
+- Multiple environments on one Redis instance
+- Python SDK + Java SDK + CLI included
 
 ---
 
@@ -29,6 +30,13 @@ pip install redis-feature-flags
 
 # CLI
 pip install redis-flags
+
+# Java SDK
+<dependency>
+    <groupId>io.github.sgs-97</groupId>
+    <artifactId>redis-feature-flags</artifactId>
+    <version>1.0.0</version>
+</dependency>
 ```
 
 ---
@@ -233,20 +241,21 @@ No `KEYS *` scans. Every operation is O(1) or O(log N).
 | Python | [PyPI](https://pypi.org/project/redis-feature-flags) | stable |
 | TypeScript | npm | coming soon |
 | Go | go modules | coming soon |
-| Java | Maven | coming soon |
+| Java | [Maven Central](https://central.sonatype.com) | coming soon |
 
 ---
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.9+
 - Redis 6.0+
+- Java 17+
 
 ---
 
 ## License
 
-MIT — [Gayatri Sravya Siripurapu](https://github.com/gayatrisravya)
+MIT — [Gayatri Sravya Siripurapu](https://github.com/sgs-97)
 
 ---
 
