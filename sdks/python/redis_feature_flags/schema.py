@@ -22,7 +22,7 @@ class SchemaKeys:
         return f"{self._prefix}:user:{user_id}:cohorts"
 
     def flags_index(self) -> str:
-        return f"{self._prefix}:flags:__index__"
+        return f"{self._prefix}:flag:__index__"
 
     def cohorts_index(self) -> str:
         return f"{self._prefix}:cohorts:__index__"

@@ -299,7 +299,7 @@ def test_list_shows_existing_flags():
     fake = make_redis_with_flag("dark_mode")
     
     # verify flag exists before invoking
-    keys = fake.smembers("ff:test:flags:__index__")
+    keys = fake.smembers("ff:test:flag:__index__")
     print("Before invoke — index:", keys)
     
     result = invoke(fake, ["list"])
@@ -338,7 +338,7 @@ def test_inspect_flag_with_invalid_timestamp():
         "created_at": "invalid", "updated_at": "invalid",
         "created_by": "test", "updated_by": "test"
     })
-    fake.sadd("ff:test:flags:__index__", "dark_mode")
+    fake.sadd("ff:test:flag:__index__", "dark_mode")
     result = invoke(fake, ["inspect", "dark_mode"])
     assert result.exit_code == 0
 
