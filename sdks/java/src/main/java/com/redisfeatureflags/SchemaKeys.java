@@ -39,7 +39,7 @@ public class SchemaKeys {
     }
 
     public String flagsIndex() {
-        return prefix + ":flags:__index__";
+        return prefix + ":flag:__index__";
     }
 
     public String cohortsIndex() {

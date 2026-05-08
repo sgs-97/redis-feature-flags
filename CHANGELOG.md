@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1] - 2026-05-08
+
+### Fixed
+
+- **Python SDK / CLI** — flags index Redis key changed from `ff:{env}:flags:__index__` (plural) to `ff:{env}:flag:__index__` (singular) for consistency with all other flag keys
+- **Python CLI** — fixed broken import in `redis_flags/__init__.py` (`from .client import FeatureFlags` → `from redis_feature_flags import FeatureFlags`)
+- **Java SDK** — flags index key updated to match new singular format (`ff:{env}:flag:__index__`)
+- **Docs** — Redis schema table updated to reflect corrected key format
+
+### Migration
+
+If you have existing data in Redis under `ff:{env}:flags:__index__`, rename the key before upgrading:
+
+```bash
+redis-cli RENAME ff:prod:flags:__index__ ff:prod:flag:__index__
+```
+
+---
+
 ## [1.0.0] - 2026-03-27
 
 ### Added

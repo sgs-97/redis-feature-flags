@@ -41,7 +41,7 @@ class SchemaKeysTest {
 
     @Test
     void testFlagsIndexKey() {
-        assertEquals("ff:prod:flags:__index__", keys.flagsIndex());
+        assertEquals("ff:prod:flag:__index__", keys.flagsIndex());
     }
 
     @Test

@@ -58,11 +58,11 @@ def test_user_cohorts_key():
 def test_flags_index_key():
     """
     Given: SchemaKeys with env=prod.
-    Expected: flags_index() returns ff:prod:flags:__index__.
+    Expected: flags_index() returns ff:prod:flag:__index__.
               This key holds the names of all flags — avoids KEYS * scan.
     """
     keys = SchemaKeys(env="prod")
-    assert keys.flags_index() == "ff:prod:flags:__index__"
+    assert keys.flags_index() == "ff:prod:flag:__index__"
 
 
 def test_cohorts_index_key():

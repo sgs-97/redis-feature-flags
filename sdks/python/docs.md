@@ -692,7 +692,7 @@ All keys namespaced by environment. Existing Redis data never touched.
 | `ff:{env}:flag:{name}:history` | List | Version history (v1.1) |
 | `ff:{env}:cohort:{name}` | Set | Cohort members |
 | `ff:{env}:user:{id}:cohorts` | Set | Reverse index |
-| `ff:{env}:flags:__index__` | Set | All flag names |
+| `ff:{env}:flag:__index__` | Set | All flag names |
 | `ff:{env}:cohorts:__index__` | Set | All cohort names |
 | `ff:{env}:__schema__` | String | Schema version |
 
