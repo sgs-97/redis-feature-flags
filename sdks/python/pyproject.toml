@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "redis-feature-flags"
-version = "0.1.0"
+version = "0.1.1"
 description = "Feature flags backed by Redis. No new server. No monthly bill."
 readme = "README.md"
 requires-python = ">=3.9"
