@@ -38,7 +38,7 @@ addopts = "--cov=redis_feature_flags --cov-report=term-missing --cov-fail-under=
 
 [tool.coverage.run]
 source = ["redis_feature_flags"]
-omit = ["tests/*"]
+omit = ["tests/*","benchmarks/*"]
 
 [tool.mypy]
 python_version = "3.9"

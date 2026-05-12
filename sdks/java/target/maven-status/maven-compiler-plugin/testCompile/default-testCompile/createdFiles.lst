@@ -1,3 +1,4 @@
+com/redisfeatureflags/BenchmarkTest.class
 com/redisfeatureflags/unit/SchemaKeysTest.class
 com/redisfeatureflags/unit/UtilsTest.class
 com/redisfeatureflags/unit/EvaluatorUnitTest.class

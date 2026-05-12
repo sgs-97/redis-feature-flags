@@ -1,4 +1,5 @@
 com/redisfeatureflags/CohortManager.class
+META-INF/spring-configuration-metadata.json
 com/redisfeatureflags/spring/FeatureFlagsAutoConfiguration.class
 com/redisfeatureflags/Evaluator.class
 com/redisfeatureflags/exceptions/RedisFlagError.class
