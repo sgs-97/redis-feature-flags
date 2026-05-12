@@ -42,6 +42,9 @@ pip install redis-flags
 ---
 
 ## 60-second quickstart
+
+## Python quickstart
+
 ```python
 import redis
 from redis_feature_flags import FeatureFlags
@@ -63,6 +66,37 @@ flags.is_enabled("dark_mode", user_id="alice")  # → True or False
 
 # Kill switch — instant off for everyone, no redeploy
 flags.disable("dark_mode")
+```
+
+## Java quickstart
+
+```java
+import com.redisfeatureflags.FeatureFlags;
+import redis.clients.jedis.JedisPool;
+
+JedisPool pool = new JedisPool("localhost", 6379);
+FeatureFlags flags = new FeatureFlags(pool, "prod");
+
+flags.create("dark_mode", 10);
+flags.enable("dark_mode");
+flags.isEnabled("dark_mode", "alice");  // → true or false
+```
+
+### Spring Boot
+
+```yaml
+# application.yml
+redis-feature-flags:
+  env: prod
+  redis-url: redis://localhost:6379
+  cache-ttl: 30
+```
+
+```java
+@Autowired
+FeatureFlags flags;
+
+flags.isEnabled("dark_mode", "alice");
 ```
 
 ---
@@ -241,9 +275,14 @@ No `KEYS *` scans. Every operation is O(1) or O(log N).
 | Python | [PyPI](https://pypi.org/project/redis-feature-flags) | stable |
 | TypeScript | npm | coming soon |
 | Go | go modules | coming soon |
-| Java | [Maven Central](https://central.sonatype.com) | coming soon |
+| Java | [Maven Central](https://central.sonatype.com/artifact/io.github.sgs-97/redis-feature-flags) | stable |
 
 ---
+
+## Performance
+
+- [Python SDK benchmarks](benchmarks/python/results.md)
+- [Java SDK benchmarks](benchmarks/java/results.md)
 
 ## Requirements
 

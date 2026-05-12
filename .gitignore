@@ -57,3 +57,5 @@ appendonly.aof
 # Distribution
 *.tar.gz
 *.whlsdks/java/target/
+
+sdks/java/target/
