@@ -1,0 +1,30 @@
+{
+  "groups": [
+    {
+      "name": "redis-feature-flags",
+      "type": "com.redisfeatureflags.spring.FeatureFlagsProperties",
+      "sourceType": "com.redisfeatureflags.spring.FeatureFlagsProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "redis-feature-flags.cache-ttl",
+      "type": "java.lang.Integer",
+      "sourceType": "com.redisfeatureflags.spring.FeatureFlagsProperties",
+      "defaultValue": 30
+    },
+    {
+      "name": "redis-feature-flags.env",
+      "type": "java.lang.String",
+      "sourceType": "com.redisfeatureflags.spring.FeatureFlagsProperties",
+      "defaultValue": "prod"
+    },
+    {
+      "name": "redis-feature-flags.redis-url",
+      "type": "java.lang.String",
+      "sourceType": "com.redisfeatureflags.spring.FeatureFlagsProperties",
+      "defaultValue": "redis:\/\/localhost:6379"
+    }
+  ],
+  "hints": []
+}
