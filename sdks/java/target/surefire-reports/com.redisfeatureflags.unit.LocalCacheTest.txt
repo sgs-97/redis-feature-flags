@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.redisfeatureflags.unit.LocalCacheTest
--------------------------------------------------------------------------------
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.359 s -- in com.redisfeatureflags.unit.LocalCacheTest

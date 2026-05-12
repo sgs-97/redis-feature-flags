@@ -1,9 +1,0 @@
-com/redisfeatureflags/BenchmarkTest.class
-com/redisfeatureflags/unit/SchemaKeysTest.class
-com/redisfeatureflags/unit/UtilsTest.class
-com/redisfeatureflags/unit/EvaluatorUnitTest.class
-com/redisfeatureflags/unit/LocalCacheTest.class
-com/redisfeatureflags/e2e/EvaluatorTest.class
-com/redisfeatureflags/e2e/CohortManagerTest.class
-com/redisfeatureflags/unit/CohortManagerUnitTest.class
-com/redisfeatureflags/e2e/FeatureFlagsTest.class

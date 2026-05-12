@@ -1,9 +1,0 @@
-/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/test/java/com/redisfeatureflags/unit/EvaluatorUnitTest.java
-/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/test/java/com/redisfeatureflags/unit/SchemaKeysTest.java
-/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/test/java/com/redisfeatureflags/unit/CohortManagerUnitTest.java
-/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/test/java/com/redisfeatureflags/e2e/EvaluatorTest.java
-/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/test/java/com/redisfeatureflags/e2e/FeatureFlagsTest.java
-/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/test/java/com/redisfeatureflags/BenchmarkTest.java
-/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/test/java/com/redisfeatureflags/unit/UtilsTest.java
-/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/test/java/com/redisfeatureflags/unit/LocalCacheTest.java
-/Users/siripurapusravya/Documents/wrappers/redis-feature-flags/sdks/java/src/test/java/com/redisfeatureflags/e2e/CohortManagerTest.java
