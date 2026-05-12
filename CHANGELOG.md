@@ -58,3 +58,42 @@ redis-cli RENAME ff:prod:flags:__index__ ff:prod:flag:__index__
 - Shared evaluation spec — `spec/evaluation_spec.json`
 - GitHub Actions CI — Python 3.9, 3.10, 3.11, 3.12, 3.13
 - MIT License
+
+## [1.0.0] - 2026-03-27
+
+### Added
+
+**Python SDK** (`sdks/python`)
+- 94 tests — 100% coverage
+- Python 3.9+ support
+
+**Python CLI** (`cli/`)
+- 68 tests — 95.83% coverage
+
+**Infrastructure**
+- GitHub Actions CI
+- MIT License
+- docs/docs.md
+
+## [1.1.0] - 2026-05-11
+
+### Added
+
+**Java SDK** (`sdks/java`)
+- FeatureFlags client — full public API
+- Spring Boot autoconfiguration
+- JedisProvider interface — clean abstraction
+- 109 tests passing — unit + e2e
+- Java 17+
+
+**Benchmarks**
+- Python SDK — 9 benchmarks — warm cache 0.104ms
+- Java SDK — 6 benchmarks — warm cache 0.041ms
+
+**E2e tests**
+- Python SDK e2e — real Redis
+- Python CLI e2e — real Redis
+- Cross-verification — SDK ↔ CLI compatibility
+
+**CI**
+- Java GitHub Actions — Python 3.9-3.13 + Java 17
