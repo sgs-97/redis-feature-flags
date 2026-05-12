@@ -21,6 +21,8 @@ No new server. No monthly bill. No SaaS.
 - Multiple environments on one Redis instance
 - Python SDK + Java SDK + CLI included
 
+📖 [Full documentation](docs/docs.md)
+
 ---
 
 ## Install
