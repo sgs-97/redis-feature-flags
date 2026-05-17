@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "redis-flags"
 version = "0.1.1"
-description = "CLI for redis-feature-flags — manage feature flags from your terminal."
+description = "CLI for redis-feature-flags. Manage feature flags from your terminal — create, enable, disable, inspect, rollout."
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
@@ -18,6 +18,14 @@ dependencies = [
     "tomli-w",
     "redis-feature-flags>=0.1.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/sgs-97/redis-feature-flags"
+Documentation = "https://github.com/sgs-97/redis-feature-flags/blob/master/docs/cli.md"
+Changelog = "https://github.com/sgs-97/redis-feature-flags/blob/master/CHANGELOG.md"
+"Bug Tracker" = "https://github.com/sgs-97/redis-feature-flags/issues"
+"Python SDK" = "https://pypi.org/project/redis-feature-flags"
+"Java SDK" = "https://central.sonatype.com/artifact/io.github.sgs-97/redis-feature-flags"
 
 [project.scripts]
 redis-flags = "redis_flags.main:app"
