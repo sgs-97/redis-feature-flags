@@ -134,16 +134,14 @@ MIT — [Gayatri Sravya Siripurapu](https://github.com/sgs-97)
 
 ---
 
-## Contributing
+## Community
 
-Contributions welcome. See [CONTRIBUTING.md](.github/CONTRIBUTING.md).
+Contributions welcome.
 
-## Reporting issues
-
-Found a bug? Have a question?
-
-Open an issue on [GitHub Issues](https://github.com/sgs-97/redis-feature-flags/issues).
-
-Please use the issue templates provided — they help us understand the issue better.
+- [Contributing Guide](.github/CONTRIBUTING.md) — how to set up, run tests, add a new SDK
+- [Code of Conduct](.github/CODE_OF_CONDUCT.md) — community standards
+- [Security Policy](.github/SECURITY.md) — how to report vulnerabilities privately
+- [Report a bug](https://github.com/sgs-97/redis-feature-flags/issues/new?template=bug_report.md) — something is broken
+- [Request a feature](https://github.com/sgs-97/redis-feature-flags/issues/new?template=feature_request.md) — suggest an idea
 
 For security vulnerabilities do not open a public issue. See [SECURITY.md](.github/SECURITY.md).
