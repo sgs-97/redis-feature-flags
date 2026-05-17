@@ -7,12 +7,26 @@
 
     <groupId>io.github.sgs-97</groupId>
     <artifactId>redis-feature-flags</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>redis-feature-flags</name>
     <description>Feature flags backed by Redis. No new server. No monthly bill.</description>
     <url>https://github.com/sgs-97/redis-feature-flags</url>
+
+    <description>Feature flags backed by Redis. Gradual rollout, cohort targeting, kill switches — no new infrastructure needed.</description>
+
+    <developers>
+        <developer>
+            <name>Gayatri Sravya Siripurapu</name>
+            <url>https://github.com/sgs-97</url>
+        </developer>
+    </developers>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/sgs-97/redis-feature-flags/issues</url>
+    </issueManagement>
 
     <licenses>
         <license>
