@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "redis-flags"
-version = "0.1.1"
+version = "0.1.2"
 description = "CLI for redis-feature-flags. Manage feature flags from your terminal — create, enable, disable, inspect, rollout."
 readme = "README.md"
 requires-python = ">=3.9"
