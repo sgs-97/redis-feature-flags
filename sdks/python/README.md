@@ -1,9 +1,12 @@
 # redis-feature-flags
 
-Feature flags backed by Redis.
-No new server. No new database. No monthly bill.
+Feature flags backed by Redis. No new server. No new cost. Your data stays in your infrastructure.
 
-## Install
+- Gradual rollout
+- User targeting
+- Cohort targeting
+- Kill switch
+- Flag expiry
+- Works when Redis is down
 
-# Python
-pip install redis-feature-flags
+Full documentation: https://github.com/sgs-97/redis-feature-flags
