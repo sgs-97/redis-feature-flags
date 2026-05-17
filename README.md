@@ -137,3 +137,13 @@ MIT — [Gayatri Sravya Siripurapu](https://github.com/sgs-97)
 ## Contributing
 
 Contributions welcome. See [CONTRIBUTING.md](.github/CONTRIBUTING.md).
+
+## Reporting issues
+
+Found a bug? Have a question?
+
+Open an issue on [GitHub Issues](https://github.com/sgs-97/redis-feature-flags/issues).
+
+Please use the issue templates provided — they help us understand the issue better.
+
+For security vulnerabilities do not open a public issue. See [SECURITY.md](.github/SECURITY.md).
