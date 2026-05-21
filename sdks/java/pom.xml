@@ -11,7 +11,6 @@
     <packaging>jar</packaging>
 
     <name>redis-feature-flags</name>
-    <description>Feature flags backed by Redis. No new server. No monthly bill.</description>
     <url>https://github.com/sgs-97/redis-feature-flags</url>
 
     <description>Feature flags backed by Redis. Gradual rollout, cohort targeting, kill switches — no new infrastructure needed.</description>
