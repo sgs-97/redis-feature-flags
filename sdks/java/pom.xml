@@ -11,22 +11,8 @@
     <packaging>jar</packaging>
 
     <name>redis-feature-flags</name>
-    <description>Feature flags backed by Redis. No new server. No monthly bill.</description>
-    <url>https://github.com/sgs-97/redis-feature-flags</url>
-
     <description>Feature flags backed by Redis. Gradual rollout, cohort targeting, kill switches — no new infrastructure needed.</description>
-
-    <developers>
-        <developer>
-            <name>Gayatri Sravya Siripurapu</name>
-            <url>https://github.com/sgs-97</url>
-        </developer>
-    </developers>
-
-    <issueManagement>
-        <system>GitHub Issues</system>
-        <url>https://github.com/sgs-97/redis-feature-flags/issues</url>
-    </issueManagement>
+    <url>https://github.com/sgs-97/redis-feature-flags</url>
 
     <licenses>
         <license>
@@ -37,10 +23,14 @@
 
     <developers>
         <developer>
-            <name>Gayatri Sravya Siripurapu</name>
-            <url>https://github.com/gayatrisravya</url>
+            <url>https://github.com/sgs-97</url>
         </developer>
     </developers>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/sgs-97/redis-feature-flags/issues</url>
+    </issueManagement>
 
     <scm>
         <connection>scm:git:git://github.com/sgs-97/redis-feature-flags.git</connection>
@@ -60,14 +50,12 @@
     </properties>
 
     <dependencies>
-        <!-- Redis client -->
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
             <version>${jedis.version}</version>
         </dependency>
 
-        <!-- Spring Boot autoconfiguration — optional -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
@@ -82,7 +70,6 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- Testing -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -127,7 +114,6 @@
                 <version>3.2.3</version>
             </plugin>
 
-            <!-- Sources jar — required for Maven Central -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -140,7 +126,6 @@
                 </executions>
             </plugin>
 
-            <!-- Javadoc jar — required for Maven Central -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -149,20 +134,6 @@
                     <execution>
                         <id>attach-javadocs</id>
                         <goals><goal>jar</goal></goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <!-- GPG signing — required for Maven Central -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>3.1.0</version>
-                <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
-                        <goals><goal>sign</goal></goals>
                     </execution>
                 </executions>
             </plugin>
@@ -186,17 +157,25 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.4.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                    <tokenAuth>true</tokenAuth>
+                    <autoPublish>true</autoPublish>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>central</id>
+            <url>https://central.sonatype.com/api/v1/publisher/upload</url>
         </repository>
     </distributionManagement>
 
