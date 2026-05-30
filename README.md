@@ -13,7 +13,7 @@ Most teams already run Redis. It sits in your stack as a cache or a session stor
 
 Feature flag SaaS products charge hundreds of dollars a month for a server you do not need, send your user data to their infrastructure, and add another thing to monitor.
 
-But why not just use environment variables or application.properties?
+But why not just use `environment variables` or `application.properties`?
 
 Every minor change requires a redeployment. A feature flag lets you change behavior instantly. No code push, no restart, no downtime. Flip a flag and it takes effect in milliseconds across every running instance.
 
